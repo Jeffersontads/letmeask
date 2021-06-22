@@ -1,0 +1,31 @@
+.button {
+    margin-top: 64px;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 500;
+    background-color: #835afd;
+    color: #fff;
+    padding: 0 32px;
+
+    display: flex;
+    justify-content: center; //para o texto ficar ao centro bem como todos os items
+    align-items: center;
+
+    cursor: pointer;
+    border: 0;
+
+    transition: filter 0.2s; // quando aplicar um novo filtro demora 0.2s
+
+    img {
+        margin-right: 8px;
+    }
+
+    &:not(:disabled):hover { //quando ele nao estiver disable aplica
+      filter: brightness(0.9); 
+    }
+
+    &:disabled {
+        cursor: not-allowed; // quando o user passar o mouse em cima da a plaquinha de nao permitido
+        opacity: 0.6;
+    }
+}
