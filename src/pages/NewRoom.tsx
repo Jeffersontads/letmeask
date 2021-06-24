@@ -1,28 +1,26 @@
 import {Link} from 'react-router-dom';
- 
-import {useContext} from 'react'
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
+// import { useAuth } from '../hooks/useAuth';
 
 import '../styles/auth.scss'
-import { AuthContext } from '../App';
 
 export function NewRoom() {
-    const {user} = useContext(AuthContext);
+    // const {user} = useAuth();
 
     return (
         <div id="page-auth">
             <aside>
                 <img src={illustrationImg} alt="Imagem de Ilustracao pagina home" />
-                <strong>Crie salas de Q&amp;A ao-vivo </strong>
+                <strong>Crie salas de Q&amp;A ao vivo </strong>
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
             </aside>
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="logotipo da empresa letmeask" />
-                    <h1>{user?.name}</h1>
+                    
                     <h2>Cria uma nova sala</h2>
                 <form>
                     <input

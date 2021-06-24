@@ -9,13 +9,12 @@ import googleIconImg from '../assets/images/google-icon.svg';
 import { Button } from '../components/Button';
 
 import '../styles/auth.scss'
-import { useContext } from 'react';
-import { AuthContext } from '../App';
+import { useAuth } from '../hooks/useAuth';
 
 
 export function Home() {
     const history = useHistory(); // toda funcao que comeca com use sao hooks do react e todo hook tem que estar dentro do componente para que possa usar seu contexto
-    const {user, signWithGoogle} = useContext(AuthContext);
+    const {user, signWithGoogle} = useAuth();
 
    async function handleCreateRoom() {
         //se o user nao estiver autenticado chama o metodo criando para autenticacao
